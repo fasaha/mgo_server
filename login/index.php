@@ -3,13 +3,14 @@
  * Created by PhpStorm.
  * User: user
  * Date: 2018/7/5
- * Time: 14:16
+ * Time: 15:49
  */
-
-$params=array_merge($_GET, $_POST);
-foreach ($params as $k => $v)
+require_once "../base/BaseApi.php";
+class index extends BaseApi
 {
-    
+
 }
-$result = json_encode($params);
-echo $result;
+
+$a = new index();
+$a->init();
+echo json_encode($_REQUEST);
